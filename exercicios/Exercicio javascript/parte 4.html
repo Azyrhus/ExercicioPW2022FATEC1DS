@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <script>
+        function f1() {
+            let v = document.getElementById("one");
+            v.style.backgroundColor = "red";
+            v.style.color = "white";
+        }
+        function f2() {
+            let v = document.getElementById("one");
+            v.style.backgroundColor = "white";
+            v.style.color = "black";
+        }
+        function f3() {
+            let v = document.getElementById("two");
+            v.style.backgroundColor = "black";
+            v.style.color = "white";
+        }
+        function f4() {
+            var vIn = document.getElementById("three");
+            vIn.value = (vIn.value).toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+    <h1> Eventos Javascript </h1>
+    <h2 id="one" onmouseover="f1();" onmouseout="f2();"> onMouseOver e onMouseOut </h2>
+    <p> MouseOver - Executa a ação quando o mouse do usuário passar sobre o elemento, MouseOut = Quando não está no
+        elemento</p>
+    <h2 id="two"> onFocus </h2>
+    <input type="text" onfocus="f3();">
+    <p> Executa a ação quando o elemento for focado pelo usuário</p>
+    <h2> onChange </h2>
+    <input type="text" id="three" onchange="f4();">
+    <p> Muda o valor do elemento</p>
+</body>
+
+</html>

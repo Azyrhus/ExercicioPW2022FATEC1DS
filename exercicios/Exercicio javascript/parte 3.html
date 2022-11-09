@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <script>
+
+        function one() {
+            let valor1 = document.getElementById("teste1").innerHTML;
+            alert(valor1);
+        }
+        function two() {
+            var doc = document.getElementsByTagName("b");
+            doc[0].style.background = "purple";
+            doc[0].style.color = "white";
+        }
+        function three() {
+            document.getElementsByClassName("teste2")[0].style.border =
+                "10px dashed red";
+        }
+        function four() {
+            var v1 = document.getElementById("teste3");
+            v1.querySelector("p").style.backgroundColor = "green";
+            v1.querySelector("p").style.color = "white";
+        }
+        function five() {
+            var x = document.getElementById("teste4").querySelectorAll("p");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "blue";
+                x[i].style.color = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="teste1">
+        <p> Exemplo de document.getElementById </p>
+    </div>
+
+    <input type="button" onclick="one()">
+    <hr>
+
+    <button onclick="two()">-_-</button>
+    <b> Exemplo de document.getElementByTagName </b>
+    <hr>
+
+    <div class="teste2">
+        <p> Exemplo de document.getElementByClassName </p>
+    </div>
+
+    <input type="button" onclick="three()">
+    <hr>
+
+    <div id="teste3"> Exemplo de document.querySelector
+        <p>Primeiro elemento seletor de css.</p>
+        <p>Segundo elemento seletor de css.</p>
+
+    </div>
+    <button onclick="four()">-_-</button>
+    <hr>
+
+    <div id="teste4"> Exemplo de document.querySelectorAll
+        <p>Primeiro elemento seletor de css.</p>
+        <p>Segundo elemento seletor de css.</p>
+
+    </div>
+    <button onclick="five()">-_-</button>
+
+    <h1> document.getElementById </h1>
+    <p> Serve para pegar o elemento pelo id dele</p>
+
+    <h1> document.getElementsByTagName </h1>
+    <p> Serve para pegar todos os elementos com aquela tag</p>
+
+    <h1> document.getElementsByClassName </h1>
+    <p> Serve para pegar os elementos que contenham a determinada classe</p>
+
+    <h1> document.querySelector</h1>
+    <p> Serve para retornar o primeiro elemento que corresponde a um seletor de CSS no documento.</p>
+
+    <h1> document.querySelectorAll</h1>
+    <p> Serve para retornar todos elementos que correspondem a algum seletor de CSS no documento.</p>
+</body>
+
+</html>
